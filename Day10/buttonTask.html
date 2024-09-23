@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Button Tasks</title>
+		<style>
+			/* Internal CSS */
+			.btn {
+				background-color: lightgrey;
+				padding: 10px 20px;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+
+			.btn.clicked {
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Button 1: Disappear when clicked -->
+		<button id="disappear-btn" class="btn">Click me to disappear!</button>
+
+		<!-- Button 2: Toggle background color when clicked -->
+		<button id="color-change-btn" class="btn">
+			Click me to toggle color!
+		</button>
+
+		<script>
+			// Internal JavaScript
+			const disappearBtn = document.getElementById("disappear-btn");
+			const colorChangeBtn = document.getElementById("color-change-btn");
+
+			disappearBtn.addEventListener("click", () => {
+				disappearBtn.style.display = "none";
+			});
+
+			colorChangeBtn.addEventListener("click", () => {
+				colorChangeBtn.classList.toggle("clicked");
+			});
+		</script>
+	</body>
+</html>

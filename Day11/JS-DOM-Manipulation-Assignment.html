@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM Manipulation Assignment</title>
+		<style>
+			/* Internal CSS for styles */
+			#hoverDiv {
+				width: 200px;
+				height: 100px;
+				border: 1px solid black;
+				margin-top: 10px;
+			}
+			#hoverDiv:hover {
+				background-color: cyan;
+			}
+
+			#toggleDiv.hidden {
+				display: none;
+			}
+
+			ul {
+				list-style: none;
+				padding: 0;
+			}
+
+			ul li {
+				margin: 5px 0;
+			}
+
+			#timeDisplay {
+				font-size: 20px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Task 1: Change paragraph content -->
+		<h2>Task 1: Change Paragraph Content on Button Click</h2>
+		<p id="text">This is the original text.</p>
+		<button onclick="changeText()">Change Text</button>
+
+		<!-- Task 2: Change background color on hover -->
+		<h2>Task 2: Change Background Color on Hover</h2>
+		<div id="hoverDiv">Hover over me!</div>
+
+		<!-- Task 3: Add new list item -->
+		<h2>Task 3: Add List Item</h2>
+		<ul id="myList">
+			<li>Item 1</li>
+			<li>Item 2</li>
+		</ul>
+		<button onclick="addListItem()">Add Item</button>
+
+		<!-- Task 4: Remove item from list -->
+		<h2>Task 4: Remove List Item</h2>
+		<ul id="removableList">
+			<li>Item 1 <button onclick="removeItem(this)">Remove</button></li>
+			<li>Item 2 <button onclick="removeItem(this)">Remove</button></li>
+		</ul>
+
+		<!-- Task 5: Form submission -->
+		<h2>Task 5: Form Submission</h2>
+		<form id="userForm">
+			<label for="name">Name:</label>
+			<input type="text" id="name" required /><br /><br />
+			<label for="email">Email:</label>
+			<input type="email" id="email" required /><br /><br />
+			<button type="submit">Submit</button>
+		</form>
+		<p id="message"></p>
+
+		<!-- Task 6: Show alert -->
+		<h2>Task 6: Button Alert</h2>
+		<button id="alertButton">Click me</button>
+
+		<!-- Task 7: Toggle hidden class -->
+		<h2>Task 7: Toggle Hidden Element</h2>
+		<div id="toggleDiv" class="hidden">This is hidden text!</div>
+		<button onclick="toggleHidden()">Toggle Visibility</button>
+
+		<!-- Task 8: Display input value -->
+		<h2>Task 8: Display Input Value</h2>
+		<input type="text" id="inputValue" placeholder="Type something" />
+		<button onclick="displayValue()">Display</button>
+		<p id="displayArea"></p>
+
+		<!-- Task 9: innerHTML vs textContent -->
+		<h2>Task 9: innerHTML vs textContent</h2>
+		<div id="htmlText">
+			This is <strong>bold</strong> and <em>italic</em> text.
+		</div>
+		<button onclick="showInnerHTML()">Show innerHTML</button>
+		<button onclick="showTextContent()">Show textContent</button>
+		<p id="output"></p>
+
+		<!-- Task 10: Display current time -->
+		<h2>Task 10: Display Current Time</h2>
+		<p id="timeDisplay"></p>
+
+		<script>
+			// Internal JS for each task
+
+			// Task 1: Change paragraph content
+			function changeText() {
+				document.getElementById("text").textContent =
+					"The text has been changed!";
+			}
+
+			// Task 2: Change background color on hover
+			/* const hoverDiv = document.getElementById("hoverDiv");
+			hoverDiv.addEventListener("mouseover", () => {
+				hoverDiv.style.backgroundColor = "blue";
+			});
+			hoverDiv.addEventListener("mouseout", () => {
+				hoverDiv.style.backgroundColor = "";
+			}); */
+
+			// Task 3: Add new list item
+			function addListItem() {
+				const newItem = document.createElement("li");
+				newItem.textContent = "New Item";
+				document.getElementById("myList").appendChild(newItem);
+			}
+
+			// Task 4: Remove item from list
+			function removeItem(button) {
+				const li = button.parentElement;
+				li.remove();
+			}
+
+			// Task 5: Form submission
+			document
+				.getElementById("userForm")
+				.addEventListener("submit", function (event) {
+					event.preventDefault();
+					const name = document.getElementById("name").value;
+					document.getElementById(
+						"message"
+					).textContent = `Thank you for submitting, ${name}!`;
+				});
+
+			// Task 6: Show alert
+			document
+				.getElementById("alertButton")
+				.addEventListener("click", function () {
+					alert("Button clicked!");
+				});
+
+			// Task 7: Toggle hidden class
+			function toggleHidden() {
+				const div = document.getElementById("toggleDiv");
+				div.classList.toggle("hidden");
+			}
+
+			// Task 8: Display input value
+			function displayValue() {
+				const value = document.getElementById("inputValue").value;
+				document.getElementById("displayArea").textContent = value;
+			}
+
+			// Task 9: innerHTML vs textContent
+			function showInnerHTML() {
+				document.getElementById("output").textContent =
+					document.getElementById("htmlText").innerHTML;
+			}
+
+			function showTextContent() {
+				document.getElementById("output").textContent =
+					document.getElementById("htmlText").textContent;
+			}
+
+			// Task 10: Display current time
+			function updateTime() {
+				const now = new Date();
+				const timeString = now.toLocaleTimeString();
+				document.getElementById("timeDisplay").textContent = timeString;
+			}
+			setInterval(updateTime, 1000); // Update every second
+		</script>
+	</body>
+</html>

@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+h2 {
+	font-size: 2.2rem;
+}
+
+h3 {
+	font-size: 1.8rem;
+}
+
+h2,
+h3 {
+	color: #333;
+}
+
+h1 {
+	font-size: 3rem;
+	color: #3262ca;
+}
+
+p {
+	font-size: 1.2rem;
+	color: #555;
+}
+
+/* Navbar Styles */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: #ececec;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+	gap: 20px;
+}
+
+.nav-links li a {
+	font-size: 16px;
+}
+
+.btn-get-started {
+	background-color: #3262ca;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 30px;
+}
+
+/* Hero Section Styles */
+
+/* Carousel Container */
+.carousel {
+	position: relative;
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+/* Carousel Inner Wrapper */
+.carousel-inner {
+	display: flex;
+	width: 300%;
+	transition: transform 0.5s ease-in-out;
+}
+
+/* Carousel Item */
+.carousel-item {
+	flex: 1 0 30%;
+	width: 100%;
+}
+
+/* Carousel Item Image */
+.carousel-item img {
+	width: 100%;
+	height: auto;
+}
+
+/* Radio Buttons */
+input[type="radio"] {
+	display: none;
+}
+
+/* Label Controls */
+.carousel-controls {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.carousel-controls label {
+	cursor: pointer;
+	background-color: #ddd;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	margin: 0 5px;
+}
+
+input[type="radio"]:checked + .carousel-inner {
+	transform: translateX(0);
+}
+
+/* Specific Slides */
+#slide2:checked ~ .carousel-inner {
+	transform: translateX(-100%);
+}
+
+#slide3:checked ~ .carousel-inner {
+	transform: translateX(-200%);
+}
+
+/* Active Dot Indicator */
+input[type="radio"]:checked + label {
+	background-color: #333;
+}
+
+/* Team Section Styles */
+.team {
+	text-align: center;
+	padding: 50px 20px;
+	background-color: transparent #f8f9fa;
+}
+
+.team-members {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 30px;
+}
+
+.team-member {
+	width: 20%;
+}
+
+.team-member img {
+	width: 100%;
+	border-radius: 8px;
+}
+
+/* About Section Styles */
+.about {
+	padding: 50px 20px;
+}
+
+.experience-box {
+	margin: 100px auto;
+	width: 60%;
+	text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url(./images/writing.avif);
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	text-align: center;
+	padding: 100px 0;
+	transition: 0.5s;
+}
+.experience-box h1 {
+	color: #fff;
+	margin-bottom: 40px;
+	padding: 0;
+}
+.experience-box img {
+	border-radius: 20px;
+}
+.experience-box:hover {
+	margin: 100px auto;
+	width: 80%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url(./images/writing.avif);
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	padding: 100px 0;
+	box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.664);
+}
+
+.stats {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-top: 30px;
+	align-items: center;
+}
+
+.stat h2 {
+	color: #3262ca;
+	margin-bottom: 0px;
+}
+
+.stat p {
+	color: #777;
+	margin-top: 10px;
+	font-size: 22px;
+}

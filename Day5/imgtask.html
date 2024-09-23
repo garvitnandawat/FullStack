@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://127.0.0.1:5502/imgtext.html -->
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				background-image: url(https://scontent-del1-2.xx.fbcdn.net/v/t39.30808-1/293484927_917682872490124_5436877847339513495_n.jpg?stp=dst-jpg_p200x200&_nc_cat=106&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=0oH34xN9FVoQ7kNvgEpyX0n&_nc_ht=scontent-del1-2.xx&oh=00_AYCRKWYzVjtEPKmowD2zhH2DYtxMCWcD8Bg9iVKoaCBWAg&oe=66BCBC4B);
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+			}
+
+			.p1 {
+				position: absolute;
+				z-index: +1;
+				width: 450px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p class="p1">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro saepe
+			cupiditate laborum tempore, obcaecati ducimus. Inventore provident
+			animi ipsam consequuntur!Lorem ipsum dolor sit amet consectetur
+			adipisicing elit. Libero, ullam? Lorem ipsum dolor sit amet
+			consectetur adipisicing elit. Quam, accusamus, harum porro quae odio
+			distinctio velit at sed reiciendis corporis adipisci facere natus.
+			Corporis maiores nesciunt enim totam aliquam debitis. Quo facere
+			iste at beatae eos eum debitis harum, in numquam rerum? Neque
+			accusantium et fugit aliquid error, quisquam quas ipsum aliquam
+			magni dolorem fuga ab quo accusamus veniam unde. Porro pariatur nisi
+			facere laboriosam eius iste optio sed reprehenderit suscipit autem
+			ad voluptatibus animi iusto vero voluptatem, eum aliquam id mollitia
+			officiis, nulla cum. Aspernatur minus dicta laudantium odit. Fugiat
+			minus at asperiores ea sit repudiandae delectus nobis in eius harum
+			minima explicabo impedit, necessitatibus perspiciatis molestias
+			libero suscipit qui reprehenderit, officiis iure vitae eum. Quisquam
+			maiores facilis explicabo! Sint ab, facilis odit laudantium
+			laboriosam atque ipsam fugiat non, veritatis repellendus voluptates
+			necessitatibus saepe provident nobis culpa modi eius nulla
+			perspiciatis velit, et natus dicta. Soluta voluptate illum dolore.
+			Ducimus voluptas, harum laudantium rerum maxime pariatur qui ipsam
+			nemo doloremque asperiores ab dignissimos libero dolore beatae
+			tempora eveniet atque aperiam vitae minima. Eligendi exercitationem
+			quisquam quod mollitia beatae esse. Vero itaque ea illum ullam
+			deleniti, officia iure magnam. Expedita dignissimos dolorum quos ea
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quis
+			laboriosam debitis, cum deleniti velit alias dicta veritatis
+			sapiente, ab eius illum? Culpa voluptas illum et rem ducimus quaerat
+			tempora!
+		</p>
+
+		<!-- Code injected by live-server -->
+		<script>
+			// <![CDATA[  <-- For SVG support
+			if ("WebSocket" in window) {
+				(function () {
+					function refreshCSS() {
+						var sheets = [].slice.call(
+							document.getElementsByTagName("link")
+						);
+						var head = document.getElementsByTagName("head")[0];
+						for (var i = 0; i < sheets.length; ++i) {
+							var elem = sheets[i];
+							var parent = elem.parentElement || head;
+							parent.removeChild(elem);
+							var rel = elem.rel;
+							if (
+								(elem.href && typeof rel != "string") ||
+								rel.length == 0 ||
+								rel.toLowerCase() == "stylesheet"
+							) {
+								var url = elem.href.replace(
+									/(&|\?)_cacheOverride=\d+/,
+									""
+								);
+								elem.href =
+									url +
+									(url.indexOf("?") >= 0 ? "&" : "?") +
+									"_cacheOverride=" +
+									new Date().valueOf();
+							}
+							parent.appendChild(elem);
+						}
+					}
+					var protocol =
+						window.location.protocol === "http:"
+							? "ws://"
+							: "wss://";
+					var address =
+						protocol +
+						window.location.host +
+						window.location.pathname +
+						"/ws";
+					var socket = new WebSocket(address);
+					socket.onmessage = function (msg) {
+						if (msg.data == "reload") window.location.reload();
+						else if (msg.data == "refreshcss") refreshCSS();
+					};
+					if (
+						sessionStorage &&
+						!sessionStorage.getItem(
+							"IsThisFirstTime_Log_From_LiveServer"
+						)
+					) {
+						console.log("Live reload enabled.");
+						sessionStorage.setItem(
+							"IsThisFirstTime_Log_From_LiveServer",
+							true
+						);
+					}
+				})();
+			} else {
+				console.error(
+					"Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+				);
+			}
+			// ]]>
+		</script>
+	</body>
+</html>
