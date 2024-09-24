@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Display Input Value</title>
+</head>
+<body>
+    <input type="text" id="myInput" placeholder="Enter something...">
+    <button onclick="displayInput()">Display</button>
+    <p id="displayArea"></p>
+
+    <script>
+        function displayInput() {
+            const inputValue = document.getElementById("myInput").value;
+            document.getElementById("displayArea").textContent = inputValue;
+        }
+    </script>
+</body>
+</html>

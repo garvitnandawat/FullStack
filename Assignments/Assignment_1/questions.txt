@@ -1,0 +1,11 @@
+10. a) <video>
+11. b) <select>
+12. b) <!-- Comment -->
+13. b) <em>
+14. d) <tr> and </tr>
+15. a) <div>
+16. The <head> tag contains meta-information about the document like the title, links to stylesheets, scripts, etc.
+17. The <!DOCTYPE> declaration defines the document type and version of HTML.
+18. The <table> element defines the structure of a table.
+19. The alt attribute in the <img> tag provides alternative text for the image if it cannot be displayed.
+20. The <footer> tag defines the footer for a document or a section.

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Submission</title>
+</head>
+<body>
+    <form onsubmit="displayMessage(event)">
+        Name: <input type="text" id="name" required><br>
+        Email: <input type="email" id="email" required><br>
+        <button type="submit">Submit</button>
+    </form>
+    <p id="message"></p>
+
+    <script>
+        function displayMessage(event) {
+            event.preventDefault(); 
+            const name = document.getElementById("name").value;
+            document.getElementById("message").textContent = `Thank you for submitting, ${name}!`;
+        }
+    </script>
+</body>
+</html>

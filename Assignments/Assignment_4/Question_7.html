@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Toggle Visibility</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="myElement" class="hidden">This is a hidden element.</div>
+    <button onclick="toggleVisibility()">Toggle Visibility</button>
+
+    <script>
+        function toggleVisibility() {
+            const element = document.getElementById("myElement");
+            element.classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>

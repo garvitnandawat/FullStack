@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        height: 500px;
+        background-color: black;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+       
+      }
+
+      .item {
+        height: 50px;
+        padding: 10px;
+      }
+
+    .item1{
+        flex: 0 0 300px ;
+    }
+     
+
+     
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1" style="background-color: yellow">item1</div>
+      <div class="item item2" style="background-color: red">item2</div>
+      <div class="item item3" style="background-color: orangered">item3</div>
+      <div class="item item4" style="background-color: green">item4</div>
+      <div class="item item5" style="background-color: rgb(197, 181, 77)">
+        item5
+      </div>
+      <div class="item item6" style="background-color: rgb(128, 58, 0)">
+        item6
+      </div>
+    </div>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* child combinator*/
+      ul > li {
+        color: red;
+      }
+      /* /descendent selector/ */
+      div h1 {
+        color: blue;
+      }
+
+      /* grouping selector */
+      h2,
+      p {
+        color: red;
+      }
+ 
+      a {
+        transition: all 400ms ease-in 100ms;
+      }
+      a:hover{
+        font-size: 20px;
+        color: red;
+      }
+
+      a:active{
+        color: blue;
+      }
+
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+    </ul>
+
+    <div>
+      <h1>hello</h1>
+    </div>
+
+    <div id="wrapper">
+      <h2>techno</h2>
+      <p>hello</p>
+    </div>
+
+    <a href="">Click</a>
+  </body>
+</html>

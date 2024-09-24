@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url(page.jpg);
+        background-size: cover;
+      }
+      .submit {
+        text-align: center;
+      }
+      .button {
+        background-color: black;
+        color: white;
+        border-radius: 25px;
+        height: 45px;
+        width: 150px;
+        border-style: solid;
+      }
+      .details {
+        display: flex;
+        justify-content: center;
+        display: grid;
+        text-align: center;
+      }
+      .detail1 {
+        text-align: center;
+        border-style: solid;
+        border-radius: 25px;
+        margin: 5px;
+        height: 30px;
+        width: 200px;
+      }
+      .detail2 {
+        border-radius: 25px;
+        border-style: solid;
+        text-align: center;
+        margin: 5px;
+        height: 30px;
+        width: 200px;
+      }
+      .head {
+        text-align: center;
+        color: white;
+        /* gfef */
+      }
+      .form-container {
+        display: flex;
+        justify-content: center; /* Centers the form horizontally */
+        align-items: center; /* Centers the form vertically */
+        height: 100vh; /* Full height of the viewport */
+      }
+      .content {
+        border: 2px solid aqua;
+        padding: 5px;
+        backdrop-filter: blur(10px);
+      }
+      .terms {
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <form action="" method="post">
+        <div class="content">
+          <header>
+            <div class="head">
+              <h1>Flodesk</h1>
+              <h5>Welcome back!</h5>
+            </div>
+          </header>
+          <main>
+            <div class="details">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="detail1"
+              />
+
+              <input
+                class="detail2"
+                type="password"
+                placeholder="Enter your password"
+              />
+            </div>
+            <br />
+            <div class="submit">
+              <button class="button" type="submit">Login to Flodesk</button>
+            </div>
+          </main>
+          <div class="terms">
+            <p>Not a member ? <a href="index.html">Sign up</a></p>
+            <a href="index.html">Forgot password</a>
+            <p>
+              By continuing you agree to Flodesk <a href="index.html"> term</a>
+            </p>
+            <p>
+              and acknowledge you have read our <a href="index.html">privacy</a>
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

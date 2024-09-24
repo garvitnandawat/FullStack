@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Retrieve innerHTML and textContent</title>
+</head>
+<body>
+    <div id="myDiv"><strong>Bold</strong> and <em>italic</em> text.</div>
+    <button onclick="showInnerHTML()">Show innerHTML</button>
+    <button onclick="showTextContent()">Show textContent</button>
+    <p id="innerHTMLResult"></p>
+    <p id="textContentResult"></p>
+
+    <script>
+        function showInnerHTML() {
+            const innerHTMLValue = document.getElementById("myDiv").innerHTML;
+            document.getElementById("innerHTMLResult").textContent = "innerHTML: " + innerHTMLValue;
+        }
+
+        function showTextContent() {
+            const textContentValue = document.getElementById("myDiv").textContent;
+            document.getElementById("textContentResult").textContent = "textContent: " + textContentValue;
+        }
+    </script>
+</body>
+</html>

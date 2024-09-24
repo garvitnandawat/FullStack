@@ -1,0 +1,30 @@
+.boxes
+{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 1.5px;
+    display: flex;
+
+    
+}
+.box{
+    background-color: red;
+    border: 2px solid black;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+@media screen and (max-width:400px){
+    .box
+    {
+        background-color: blue;
+        color: white;
+    }
+    .boxes
+    {
+        flex-direction: column;
+    }
+}

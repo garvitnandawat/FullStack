@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Eligibility Checker</title>
+</head>
+<body>
+    <h1>Loan Eligibility Checker</h1>
+
+    <label for="job_type">Select Job Type:</label>
+    <select id="job_type">
+        <option value="government">Government</option>
+        <option value="business">Business</option>
+        <option value="private">Private</option>
+    </select>
+
+    <div id="government-fields">
+        <label for="salary">Enter Salary:</label>
+        <input type="number" id="salary" placeholder="Enter salary">
+    </div>
+
+    <div id="business-fields" style="display:none;">
+        <label for="turnover">Enter Yearly Turnover:</label>
+        <input type="number" id="turnover" placeholder="Enter yearly turnover">
+    </div>
+
+    <button onclick="checkLoanEligibility()">Check Eligibility</button>
+
+    <p id="result"></p>
+
+    <script>
+        // Toggle input fields based on job type
+        document.getElementById('job_type').addEventListener('change', function() {
+            var jobType = this.value;
+            document.getElementById('government-fields').style.display = jobType === 'government' ? 'block' : 'none';
+            document.getElementById('business-fields').style.display = jobType === 'business' ? 'block' : 'none';
+        });
+
+        function checkLoanEligibility() {
+            var jobType = document.getElementById('job_type').value;
+            var resultText = "";
+
+            if (jobType === "government") {
+                var salary = parseInt(document.getElementById('salary').value);
+                if (salary > 50000) {
+                    resultText = "You can apply for a loan.";
+                } else {
+                    resultText = "You cannot apply for a loan.";
+                }
+            } else if (jobType === "business") {
+                var turnover = parseInt(document.getElementById('turnover').value);
+                if (turnover > 2000000) {
+                    resultText = "You can apply for a loan.";
+                } else {
+                    resultText = "You cannot apply for a loan.";
+                }
+            } else if (jobType === "private") {
+                resultText = "No loan available for you.";
+            } else {
+                resultText = "Invalid job type.";
+            }
+
+            document.getElementById('result').textContent = resultText;
+        }
+    </script>
+</body>
+</html>
